@@ -39,7 +39,7 @@ Next, you will repeat the computation but this time you will normalize the score
 
 Repeat step 5 from part 1. This time, however, use the normalization formula: \bar{r_u} + {\sum_{n=1}^{5}(r_n - \bar{r}_n) w_n \over \sum_{n=1}^{5} w_n} 
 
-![rumus pertama](https://latex.codecogs.com/gif.download?%5Cbar%7Br_u%7D%20+%20%7B%5Csum_%7Bn%3D1%7D%5E%7B5%7D%28r_n%20%20%5Cbar%7Br%7D_n%29%20w_n%20%5Cover%20%5Csum_%7Bn%3D1%7D%5E%7B5%7D%20w_n%7D)
+![image](https://user-images.githubusercontent.com/67375613/98549452-cf2f9780-22c0-11eb-96b2-b316ba8fa1af.png)
 
  
 6. Remember, you do not need to re-compute the correlations, just use the existing correlations but normalize the ratings being averaged by subtracting each neighbor’s mean rating from each of their ratings (and add the target user’s mean back into the total).
