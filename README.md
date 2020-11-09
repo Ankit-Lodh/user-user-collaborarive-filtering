@@ -12,6 +12,7 @@ Identify the top 5 neighbors (the users with the 5 largest, positive correlation
 
 4. The formal formula for correlation-weighted average is
 ![rumus kedua](https://latex.codecogs.com/gif.download?%7B%5Csum_%7Bn%3D1%7D%5E%7B5%7D%20r_n%20w_n%20%5Cover%20%5Csum_%7Bn%3D1%7D%5E%7B5%7D%20w_n%7D)
+![first equation](https://latex.codecogs.com/gif.download?%7B%5Csum_%7Bn%3D1%7D%5E%7B5%7D%20r_n%20w_n%20%5Cover%20%5Csum_%7Bn%3D1%7D%5E%7B5%7D%20w_n%7D)
 
  . Remember, you will need to make sure that your weight for each contributed rating is the user-user correlation when that neighbor has rated the movie, but 0 when the neighbor has not rated the movie).
  
@@ -37,7 +38,9 @@ Don’t worry about values that result in division by zero -- those are cases wh
 Next, you will repeat the computation but this time you will normalize the scores.
 
 Repeat step 5 from part 1. This time, however, use the normalization formula: \bar{r_u} + {\sum_{n=1}^{5}(r_n - \bar{r}_n) w_n \over \sum_{n=1}^{5} w_n} 
-![rumus kedua](https://latex.codecogs.com/gif.download?%5Cbar%7Br_u%7D%20+%20%7B%5Csum_%7Bn%3D1%7D%5E%7B5%7D%28r_n%20-%20%5Cbar%7Br%7D_n%29%20w_n%20%5Cover%20%5Csum_%7Bn%3D1%7D%5E%7B5%7D%20w_n%7D)
+![rumus kedua](https://latex.codecogs.com/gif.download?%5Cbar%7Br_u%7D%20+%20%7B%5Csum_%7Bn%3D1%7D%5E%7B5%7D%28r_n%20%20%5Cbar%7Br%7D_n%29%20w_n%20%5Cover%20%5Csum_%7Bn%3D1%7D%5E%7B5%7D%20w_n%7D)
+
+![first equation](https://latex.codecogs.com/gif.download?%5Cbar%7Br_u%7D%20+%20%7B%5Csum_%7Bn%3D1%7D%5E%7B5%7D%28r_n%20%20%5Cbar%7Br%7D_n%29%20w_n%20%5Cover%20%5Csum_%7Bn%3D1%7D%5E%7B5%7D%20w_n%7D)
  
 6. Remember, you do not need to re-compute the correlations, just use the existing correlations but normalize the ratings being averaged by subtracting each neighbor’s mean rating from each of their ratings (and add the target user’s mean back into the total).
 For example, if the user ID was 3712, the correct submission would be:
