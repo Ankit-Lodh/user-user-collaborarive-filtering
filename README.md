@@ -10,27 +10,9 @@ First, you will implement user-user collaborative filtering without normalizatio
 3. Complete the user-by-user correlations matrix. To check your math, note that the correlation between users 1648 and 5136 is 0.40298, and the correlation between users 918 and 2824 is -0.31706. All correlations should be between -1 and 1, and the diagonal should be all 1's (since they are self-correlations).
 Identify the top 5 neighbors (the users with the 5 largest, positive correlations) for users 3867 and 89. For example, if the target user were #3712, the closest neighbors are 2824 (corr: 0.46291), 3867 (corr: 0.400275), 5062 (corr: 0.247693), 442 (corr: 0.22713), and 3853 (corr: 0.19366). Don't forget to exclude the target user (corr: 1.0) from your possible selections.
 
-4. The formal formula for correlation-weighted average is {\sum_{n=1}^{5} r_n w_n \over \sum_{n=1}^{5} w_n} 
-∑ 
-n=1
-5
-​	
- w 
-n
-​	
- 
-∑ 
-n=1
-5
-​	
- r 
-n
-​	
- w 
-n
-​	
- 
-​	
+4. The formal formula for correlation-weighted average is
+![rumus kedua](https://latex.codecogs.com/gif.download?%7B%5Csum_%7Bn%3D1%7D%5E%7B5%7D%20r_n%20w_n%20%5Cover%20%5Csum_%7Bn%3D1%7D%5E%7B5%7D%20w_n%7D)
+
  . Remember, you will need to make sure that your weight for each contributed rating is the user-user correlation when that neighbor has rated the movie, but 0 when the neighbor has not rated the movie).
  
 5. Indeed, you should look to see what the user’s rating (if any) is for the top-recommended movies. For example, if the user ID was 3712, the correct submission would be:
@@ -55,39 +37,7 @@ Don’t worry about values that result in division by zero -- those are cases wh
 Next, you will repeat the computation but this time you will normalize the scores.
 
 Repeat step 5 from part 1. This time, however, use the normalization formula: \bar{r_u} + {\sum_{n=1}^{5}(r_n - \bar{r}_n) w_n \over \sum_{n=1}^{5} w_n} 
-r 
-u
-​	
- 
-ˉ
-​	
- + 
-∑ 
-n=1
-5
-​	
- w 
-n
-​	
- 
-∑ 
-n=1
-5
-​	
- (r 
-n
-​	
- − 
-r
-ˉ
-  
-n
-​	
- )w 
-n
-​	
- 
-​	
+![rumus kedua](https://latex.codecogs.com/gif.download?%5Cbar%7Br_u%7D%20+%20%7B%5Csum_%7Bn%3D1%7D%5E%7B5%7D%28r_n%20-%20%5Cbar%7Br%7D_n%29%20w_n%20%5Cover%20%5Csum_%7Bn%3D1%7D%5E%7B5%7D%20w_n%7D)
  
 6. Remember, you do not need to re-compute the correlations, just use the existing correlations but normalize the ratings being averaged by subtracting each neighbor’s mean rating from each of their ratings (and add the target user’s mean back into the total).
 For example, if the user ID was 3712, the correct submission would be:
