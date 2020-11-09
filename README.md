@@ -12,7 +12,7 @@ Identify the top 5 neighbors (the users with the 5 largest, positive correlation
 
 4. The formal formula for correlation-weighted average is
 
-https://latex.codecogs.com/gif.download?%7B%5Csum_%7Bn%3D1%7D%5E%7B5%7D%20r_n%20w_n%20%5Cover%20%5Csum_%7Bn%3D1%7D%5E%7B5%7D%20w_n%7D
+!https://latex.codecogs.com/gif.download?%7B%5Csum_%7Bn%3D1%7D%5E%7B5%7D%20r_n%20w_n%20%5Cover%20%5Csum_%7Bn%3D1%7D%5E%7B5%7D%20w_n%7D
 
  . Remember, you will need to make sure that your weight for each contributed rating is the user-user correlation when that neighbor has rated the movie, but 0 when the neighbor has not rated the movie).
  
