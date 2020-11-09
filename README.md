@@ -12,7 +12,7 @@ Identify the top 5 neighbors (the users with the 5 largest, positive correlation
 
 4. The formal formula for correlation-weighted average is
 
-!https://latex.codecogs.com/gif.download?%7B%5Csum_%7Bn%3D1%7D%5E%7B5%7D%20r_n%20w_n%20%5Cover%20%5Csum_%7Bn%3D1%7D%5E%7B5%7D%20w_n%7D
+![image](https://user-images.githubusercontent.com/67375613/98549821-5250ed80-22c1-11eb-82b9-790dd54ad03f.png)
 
  . Remember, you will need to make sure that your weight for each contributed rating is the user-user correlation when that neighbor has rated the movie, but 0 when the neighbor has not rated the movie).
  
@@ -37,7 +37,7 @@ Don’t worry about values that result in division by zero -- those are cases wh
 ### Part 2 - Normalization
 Next, you will repeat the computation but this time you will normalize the scores.
 
-Repeat step 5 from part 1. This time, however, use the normalization formula: \bar{r_u} + {\sum_{n=1}^{5}(r_n - \bar{r}_n) w_n \over \sum_{n=1}^{5} w_n} 
+Repeat step 5 from part 1. This time, however, use the normalization formula:
 
 ![image](https://user-images.githubusercontent.com/67375613/98549452-cf2f9780-22c0-11eb-96b2-b316ba8fa1af.png)
 
